@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fornus — Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <button class="icon-btn hamburger" aria-label="メニュー" aria-expanded="false" aria-controls="mobile-drawer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" />
+            <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" />
+            <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+        <a class="logo" href="index.html">Fornus</a>
+      </div>
+      <div class="controls">
+        <nav class="nav-desktop">
+          <a href="plp.html?cat=men">Men</a>
+          <a href="plp.html?cat=woman">Women</a>
+          <a href="plp.html?cat=unisex">Unisex</a>
+        </nav>
+        <button class="icon-btn search-btn" aria-label="検索">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="10" r="6" />
+            <path d="m14.5 14.5 5.5 5.5" />
+          </svg>
+        </button>
+        <button class="icon-btn fav-btn" aria-label="お気に入り">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <span class="fav-count">0</span>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="カート" id="cart-toggle">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="21" r="1.5" />
+            <circle cx="20" cy="21" r="1.5" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+          <span class="cart-badge" id="cartBadgeCount">0</span>
+
+          <div class="minicart" id="minicart">
+            <div class="minicart-head">Your Cart</div>
+            <div id="minicart-items" class="minicart-content"></div>
+            <div id="minicart-footer" class="minicart-footer" style="display:none;">
+              <div class="total-row">
+                <span>Total</span>
+                <span id="minicart-total">¥0</span>
+              </div>
+              <button class="btn primary full-width">ご購入手続きへ</button>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <div class="drawer-top">
+        <a class="logo" href="index.html">Fornus</a>
+        <button class="icon-btn drawer-close" aria-label="メニューを閉じる">✕</button>
+      </div>
+      <nav class="drawer-nav">
+        <a href="plp.html?cat=men">Men</a>
+        <a href="plp.html?cat=woman">Women</a>
+        <a href="plp.html?cat=unisex">Unisex</a>
+        <a href="#">Shop Info</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container plp">
+
+
+
+    <section class="products-area">
+      <div class="plp-head">
+        <div>
+          <h2 id="plp-title">COLLECTION</h2>
+          <p class="plp-desc" id="plp-desc">Discover our complete collection.</p>
+        </div>
+        <div class="plp-controls">
+          <div class="sort">並び替え:
+            <select>
+              <option>人気</option>
+              <option>新着</option>
+              <option>価格</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid products-grid">
+        <!-- 8 products -->
+        <article class="product-card" data-cat="men"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/tailored-shirt.png" alt="テーラード オーバーシャツ" loading="lazy">
+              <button class="card-fav" data-id="frn-001" data-name="テーラード オーバーシャツ" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>テーラード オーバーシャツ</h3>
+            <p class="price">¥18,000</p>
+            <div class="color-dots"><button class="color-dot black" title="Black" aria-label="ブラック"></button><button
+                class="color-dot gray" title="Gray" aria-label="グレー"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card sold" data-cat="men"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/military-pants.png" alt="ミリタリー パンツ" loading="lazy"></div>
+            <button class="card-fav" data-id="frn-002" data-name="ミリタリー パンツ" aria-label="お気に入りに追加">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+            <span class="sold-badge">SOLD OUT</span>
+            <h3>ミリタリー パンツ</h3>
+            <p class="price">¥14,500</p>
+            <div class="color-dots"><button class="color-dot olive" title="Olive" aria-label="オリーブ"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="men"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/oversized-t.png" alt="オーバーサイズ Tシャツ" loading="lazy">
+              <button class="card-fav" data-id="frn-009" data-name="オーバーサイズ Tシャツ" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>オーバーサイズ Tシャツ</h3>
+            <p class="price">¥7,900</p>
+            <div class="color-dots"><button class="color-dot white" title="White" aria-label="ホワイト"></button><button
+                class="color-dot black" title="Black" aria-label="ブラック"></button><button class="color-dot gray"
+                title="Gray" aria-label="グレー"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="woman"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/layered-drape.png" alt="レイヤード ドレープ" loading="lazy">
+              <button class="card-fav" data-id="frn-004" data-name="レイヤード ドレープ" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>レイヤード ドレープ</h3>
+            <p class="price">¥22,000</p>
+            <div class="color-dots"><button class="color-dot black" title="Black" aria-label="ブラック"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="woman"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/tech-parka.png" alt="テクニカル パーカー" loading="lazy">
+              <button class="card-fav" data-id="frn-005" data-name="テクニカル パーカー" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>テクニカル パーカー</h3>
+            <p class="price">¥19,500</p>
+            <div class="color-dots"><button class="color-dot black" title="Black" aria-label="ブラック"></button><button
+                class="color-dot gray" title="Gray" aria-label="グレー"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="unisex"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/simple-cutsew.png" alt="シンプル カットソー" loading="lazy">
+              <button class="card-fav" data-id="frn-006" data-name="シンプル カットソー" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>シンプル カットソー</h3>
+            <p class="price">¥8,800</p>
+            <div class="color-dots"><button class="color-dot white" title="White" aria-label="ホワイト"></button><button
+                class="color-dot black" title="Black" aria-label="ブラック"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="unisex"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/unisex-jacket.png" alt="ユニセックス ジャケット" loading="lazy">
+              <button class="card-fav" data-id="frn-007" data-name="ユニセックス ジャケット" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>ユニセックス ジャケット</h3>
+            <p class="price">¥25,000</p>
+            <div class="color-dots"><button class="color-dot black" title="Black" aria-label="ブラック"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+        <article class="product-card" data-cat="unisex"><a href="pdp.html">
+            <div class="img-wrap"><img src="images/products/modern-shorts.png" alt="コンテンポラリー ショーツ" loading="lazy">
+              <button class="card-fav" data-id="frn-008" data-name="コンテンポラリー ショーツ" aria-label="お気に入りに追加">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+              </button>
+            </div>
+            <h3>コンテンポラリー ショーツ</h3>
+            <p class="price">¥11,200</p>
+            <div class="color-dots"><button class="color-dot black" title="Black" aria-label="ブラック"></button><button
+                class="color-dot gray" title="Gray" aria-label="グレー"></button></div>
+          </a>
+          <div class="quick-view"><button aria-label="クイックビュー">Quick View</button></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
